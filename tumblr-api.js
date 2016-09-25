@@ -11,12 +11,11 @@ import type {
 const API_KEY = 'AgwlbT1xjc1mMwRCndI1Z1TU1OwFdNUz6gFAL04L9PwBmo91W4';
 const API_BASE = 'https://api.tumblr.com/v2';
 
-async function loadPhotoPosts(
+export async function loadPhotoPosts(
   tumblelog: string,
   offset: number = 0,
   limit: number = 20,
 ): Promise<Array<PhotoPost>> {
-
   const apiUrl = `${API_BASE}/blog/${tumblelog}/posts/photo?${[
    `limit=${encodeURIComponent(String(limit))}`,
    `offset=${encodeURIComponent(String(offset))}`,
@@ -37,7 +36,3 @@ async function loadPhotoPosts(
       throw new Error('API Error');
   }
 }
-
-module.exports = {
-  loadPhotoPosts,
-};

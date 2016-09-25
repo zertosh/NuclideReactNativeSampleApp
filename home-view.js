@@ -1,15 +1,15 @@
 /* @flow */
 'use strict';
 
-const React = require('react');
-const {
+import React from 'react';
+import {
   Navigator,
   StyleSheet,
   Text,
   TouchableHighlight,
   View,
-} = require('react-native');
-const BlogView = require('./blog-view');
+} from 'react-native';
+import BlogView from './blog-view';
 
 const Blogs = {
   FLUFF: [
@@ -53,7 +53,7 @@ type HomeViewProps = {
   navigator: Navigator;
 };
 
-class HomeView extends React.Component {
+export default class HomeView extends React.Component {
   props: HomeViewProps;
 
   constructor(props: HomeViewProps) {
@@ -108,5 +108,3 @@ const styles = StyleSheet.create({
 function random<T>(items: Array<T>): T {
   return items[Math.floor(Math.random() * items.length)];
 }
-
-module.exports = HomeView;

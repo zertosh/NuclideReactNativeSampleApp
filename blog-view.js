@@ -5,17 +5,17 @@ import type {
   PhotoPost,
 } from './tumblr-types';
 
-const React = require('react');
-const {
+import React from 'react';
+import {
   Image,
   ListView,
   Navigator,
   StyleSheet,
   Text,
   View,
-} = require('react-native');
-const Dimensions = require('Dimensions');
-const TumblrAPI = require('./tumblr-api');
+} from 'react-native';
+import Dimensions from 'Dimensions';
+import TumblrAPI from './tumblr-api';
 
 type Props = {
   blogname: string;
@@ -32,7 +32,7 @@ type State = {
   hasError: boolean;
 };
 
-class BlogView extends React.Component {
+export default class BlogView extends React.Component {
   static defaultProps = {
     offset: 0,
   };
@@ -168,5 +168,3 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   }
 });
-
-module.exports = BlogView;
