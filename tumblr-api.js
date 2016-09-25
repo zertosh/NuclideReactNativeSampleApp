@@ -9,7 +9,7 @@ import type {
 // The Tumblr API is documented at https://www.tumblr.com/docs/en/api/v2.
 // Please register your own API key if you're going to use this app.
 const API_KEY = 'AgwlbT1xjc1mMwRCndI1Z1TU1OwFdNUz6gFAL04L9PwBmo91W4';
-const API_BASE = 'http://api.tumblr.com/v2';
+const API_BASE = 'https://api.tumblr.com/v2';
 
 async function loadPhotoPosts(
   tumblelog: string,

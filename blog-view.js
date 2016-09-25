@@ -5,7 +5,7 @@ import type {
   PhotoPost,
 } from './tumblr-types';
 
-const React = require('react-native');
+const React = require('react');
 const {
   Image,
   ListView,
@@ -13,7 +13,7 @@ const {
   StyleSheet,
   Text,
   View,
-} = React;
+} = require('react-native');
 const Dimensions = require('Dimensions');
 const TumblrAPI = require('./tumblr-api');
 

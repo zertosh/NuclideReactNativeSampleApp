@@ -1,14 +1,14 @@
 /* @flow */
 'use strict';
 
-const React = require('react-native');
+const React = require('react');
 const {
   Navigator,
   StyleSheet,
   Text,
   TouchableHighlight,
   View,
-} = React;
+} = require('react-native');
 const BlogView = require('./blog-view');
 
 const Blogs = {

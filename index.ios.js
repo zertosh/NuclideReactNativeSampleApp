@@ -1,12 +1,12 @@
 /* @flow */
 'use strict';
 
-const React = require('react-native');
+const React = require('react');
 const {
   AppRegistry,
   StyleSheet,
   NavigatorIOS,
-} = React;
+} = require('react-native');
 const HomeView = require('./home-view');
 
 class NuclideReactNativeSampleApp extends React.Component {
