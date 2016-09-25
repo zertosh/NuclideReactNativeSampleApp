@@ -10,7 +10,7 @@ const {
 const HomeView = require('./home-view');
 
 class NuclideReactNativeSampleApp extends React.Component {
-  render() {
+  render(): React.Element<any> {
     return (
       <NavigatorIOS
         style={styles.container}

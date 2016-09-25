@@ -52,14 +52,14 @@ class BlogView extends React.Component {
         rowHasChanged: (r1, r2) => r1 !== r2
       }),
     };
-    this.onEndReached = this.onEndReached.bind(this);
+    (this: any).onEndReached = this.onEndReached.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.fetchNextPosts();
   }
 
-  render() {
+  render(): React.Element<any> {
     if (this.state.hasError) {
       return (
         <View style={styles.container}>
@@ -80,7 +80,7 @@ class BlogView extends React.Component {
     );
   }
 
-  renderRow(post: PhotoPost): ReactElement {
+  renderRow(post: PhotoPost): React.Element<any> {
     const width = Dimensions.get('window').width;
     const images = post.photos.map(postPhoto => {
       // Get the photo that is closest in width to the viewport
@@ -108,7 +108,7 @@ class BlogView extends React.Component {
     );
   }
 
-  onEndReached() {
+  onEndReached(): void {
     this.fetchNextPosts();
   }
 

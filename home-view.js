@@ -35,7 +35,7 @@ type EmojiButtonProps = {
   text: string;
 };
 
-function EmojiButton(props: EmojiButtonProps): ReactElement {
+function EmojiButton(props: EmojiButtonProps): React.Element<any> {
   return (
     <TouchableHighlight
       onPress={props.onPress}
@@ -58,10 +58,10 @@ class HomeView extends React.Component {
 
   constructor(props: HomeViewProps) {
     super(props);
-    this.navigateToOne = this.navigateToOne.bind(this);
+    (this: any).navigateToOne = this.navigateToOne.bind(this);
   }
 
-  render() {
+  render(): React.Element<any> {
     return (
       <View style={styles.container}>
         <EmojiButton
