@@ -15,7 +15,7 @@ import {
   View,
 } from 'react-native';
 import Dimensions from 'Dimensions';
-import TumblrAPI from './tumblr-api';
+import * as TumblrAPI from './tumblr-api';
 
 type Props = {
   blogname: string;
